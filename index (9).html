@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GMSC Login</title>
+  <style>
+    /* same CSS as before */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .header {
+      background-color: #0047AB;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      height: 40px;
+    }
+
+    h2 {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .logo {
+      display: block;
+      margin: 20px auto;
+      width: 150px;
+    }
+
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      background-color: #0B5ED7;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0844a3;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #0B5ED7;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header"></div>
+  <h2>Login</h2>
+  <img src="GM.png" alt="GMSC Logo" class="logo">
+
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Password" required>
+
+  <button onclick="login()">Login →</button>
+
+  <div class="links">
+    <p><a href="#">Forgot Password?</a></p>
+    <p>Don't have an account? <a href="#">Sign Up</a></p>
+  </div>
+</div>
+
+<script>
+  function login() {
+    const email = document.getElementById("email").value;
+    const pass = document.getElementById("password").value;
+
+    if (email && pass) {
+      window.location.href = "complain.html"; // Redirect to complaint form
+    } else {
+      alert("Please enter both email and password.");
+    }
+  }
+</script>
+
+</body>
+</html>

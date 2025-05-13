@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Garbage Complain</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      background-color: #0B5ED7;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 20px;
+      border-radius: 10px 10px 0 0;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .submit-btn {
+      background-color: #0B5ED7;
+      color: white;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+      background-color: #094cc6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">Welcome User!!</div>
+
+    <h3>Garbage Complain</h3>
+    <form onsubmit="submitComplaint(event)">
+      <input type="text" placeholder="Area" required>
+      <input type="text" placeholder="Locality" required>
+      <input type="text" placeholder="Landmark" required>
+      <input type="text" placeholder="Address" required>
+      <label>Photo</label>
+      <input type="file" required>
+      <input type="text" placeholder="Throw Schedule" required>
+      <button type="submit" class="submit-btn">Submit →</button>
+    </form>
+  </div>
+
+  <script>
+    function submitComplaint(event) {
+      event.preventDefault(); // Prevent actual form submission
+      // Optional: You can add data validation or saving logic here
+      window.location.href = "dashboard.html"; // Redirect to dashboard
+    }
+  </script>
+
+</body>
+</html>
